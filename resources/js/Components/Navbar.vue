@@ -4,33 +4,26 @@
             <a
                 href="#"
                 class="md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
-                @click="open = !open"
+                @click="menuAberto = !menuAberto"
             >
                 Menu ☰
             </a>
         </div>
         <div
-            :class="open ? 'block' : 'hidden'"
+            :class="menuAberto ? 'block' : 'hidden'"
             class="w-full flex-grow sm:flex sm:items-center sm:w-auto"
         >
             <div
                 class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2"
             >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Início</a
+                <navlink
+                    v-for="(link, index) in menuLinks"
+                    :key="index"
+                    :active="false"
+                    :href="link.url"
                 >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Institucional</a
-                >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Cursos</a
-                >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Notícias</a
-                >
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2"
-                    >Contato</a
-                >
+                    {{ link.nome }}
+                </navlink>
             </div>
         </div>
     </nav>
@@ -38,5 +31,14 @@
 
 <script setup>
 import { ref } from "vue";
-const open = ref(false);
+import Navlink from "./NavLink.vue";
+
+const menuAberto = ref(false);
+const menuLinks = [
+    { nome: "Início", url: "#" },
+    { nome: "Cursos", url: "#" },
+    { nome: "Notícias", url: "#" },
+    { nome: "Institucional", url: "#" },
+    { nome: "Contato", url: "#" },
+];
 </script>

@@ -2,7 +2,7 @@
     <v-carousel
         cycle
         interval="4000"
-        height="400"
+        height="auto"
         show-arrows
         hide-delimiter-background
     >
@@ -20,6 +20,7 @@
             v-for="(imagem, index) in imagens"
             :key="index"
             :src="imagem"
+            max-height="400"
             cover
         />
     </v-carousel>

@@ -1,12 +1,9 @@
 <template>
-    <div class="bg-white w-full h-screen">
-        <main-header />
-        <navbar />
-        <slider />
-    </div>
+    <layout>
+        <Slider />
+    </layout>
 </template>
 <script setup>
-import MainHeader from "../Components/MainHeader.vue";
-import Navbar from "../Components/Navbar.vue";
+import Layout from "./Shared/Layout.vue";
 import Slider from "../Components/Slider.vue";
 </script>

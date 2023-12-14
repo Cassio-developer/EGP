@@ -17,3 +17,8 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+
+//Exemplo header e card template tailwind awesome
+Route::get('/welcome', function () {
+    return Inertia::render('Welcome');
+});

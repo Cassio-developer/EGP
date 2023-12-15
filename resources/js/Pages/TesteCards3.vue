@@ -36,8 +36,8 @@
                             <v-btn prepend-icon="mdi-plus">Ver Todas as Notícias</v-btn>
                         </template>
                     </v-banner>
+                    <LinkTestesCards/>
                 </v-container>
-                <v-divider length="500px" :thickness="4" color="blue"></v-divider>
             </v-main>
         </v-app>
     </layout>
@@ -48,6 +48,7 @@
   import Slider from "../Components/Slider.vue";
   import TesteCard from "../Components/TesteCard.vue";
   import TesteCard2 from "../Components/TesteCard2.vue";
+  import LinkTestesCards from "../Components/LinkTestesCards.vue";
   
   const noticias = [
     {

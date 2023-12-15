@@ -1,7 +1,9 @@
 <template>
     <Layout>
         <section class="container mx-auto w-1/2 my-10">
-            <h1 class="text-4xl font-bold">Palestra Dezembro Verde</h1>
+            <h1 class="text-4xl font-bold text-blue-800">
+                Palestra Dezembro Verde
+            </h1>
             <p class="text-xs my-2">Publicada 05/12/2023 às 13:30</p>
             <img
                 class="w-full"
@@ -36,9 +38,9 @@
                 posuere laoreet risus, et egestas orci semper vitae.
             </p>
 
-            <a class="underline text-blue-600 hover:text-blue-800" href="#"
-                >Link para inscrições</a
-            >
+            <a class="underline text-blue-700 hover:text-blue-800" href="#">
+                Link para inscrições
+            </a>
         </section>
     </Layout>
 </template>

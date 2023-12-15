@@ -15,7 +15,7 @@
                     
                     <v-row class="py-4">
                         <v-col cols="12" md="4" v-for="noticia in noticias">
-                            <TesteCard :noticia="noticia"/>
+                            <TesteCardSemTag :noticia="noticia"/>
                         </v-col>
                     </v-row>
                     <!-- <h1 class="text-h5 border-b-2 border-b-blue-800 mt-6 pb-1 text-right">Todas as Notícias</h1> -->
@@ -35,7 +35,7 @@
 <script setup>
 import Layout from "./Shared/Layout.vue";
 import Slider from "../Components/Slider.vue";
-import TesteCard from "../Components/TesteCard.vue";
+import TesteCardSemTag from "../Components/TesteCardSemTag.vue";
 import LinkTestesCards from "../Components/LinkTestesCards.vue";
 
 const noticias = [

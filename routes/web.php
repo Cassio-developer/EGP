@@ -45,3 +45,8 @@ Route::get('/testeCards2', function () {
 Route::get('/testeCards3', function () {
     return Inertia::render('TesteCards3');
 });
+
+//Testando os cards de noticias sem as tags
+Route::get('/testeCardsSemTags', function () {
+    return Inertia::render('TesteCardsSemTags');
+});

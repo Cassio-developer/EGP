@@ -1,5 +1,5 @@
 import { createApp, h } from "vue";
-import { createInertiaApp } from "@inertiajs/vue3";
+import { createInertiaApp, Link } from "@inertiajs/vue3";
 
 // Vuetify
 import 'vuetify/styles'
@@ -24,6 +24,7 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(vuetify)
+            .component('Link', Link)
             .mixin({ methods: { route } })
             .mount(el);
     },

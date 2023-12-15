@@ -1,8 +1,5 @@
 <template>
     <article class="flex flex-col shadow my-4">
-        <!-- Article Image -->
-        <!-- <a href="#" class="hover:opacity-75"> -->
-        <!-- <a href="#" class="hover:opacity-75 px-4 pt-4"> -->
         <a href="#" class="hover:opacity-75 flex justify-center p-4">
             <slot name="imagem"/>
         </a>

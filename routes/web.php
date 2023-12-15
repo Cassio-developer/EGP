@@ -23,9 +23,6 @@ Route::prefix('noticias')->group(function () {
     Route::delete('/delete/{id}', [NoticiaController::class, 'destroy'])->name('excluir-noticia')->middleware([HandlePrecognitiveRequests::class]);
 });
 
-Route::get('/noticia', function () {
-    return Inertia::render('Noticia/Show');
-});
 
 //Exemplo header e card template tailwind awesome
 Route::get('/welcome', function () {

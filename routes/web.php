@@ -6,7 +6,7 @@ use Inertia\Inertia;
 
 
 Route::get('/', function () {
-    return Inertia::render('Home');
+    return Inertia::render('TesteCards');
 });
 
 
@@ -19,4 +19,10 @@ Route::prefix('publicacoes')->group(function () {
 //Exemplo header e card template tailwind awesome
 Route::get('/welcome', function () {
     return Inertia::render('Welcome');
+});
+
+
+//Testando os cards de noticias
+Route::get('/testeCards', function () {
+    return Inertia::render('TesteCards');
 });

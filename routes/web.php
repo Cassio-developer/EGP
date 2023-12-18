@@ -10,19 +10,11 @@ Route::get('/', function () {
 });
 
 
-Route::prefix('noticias')->group(function () {
-    Route::get('/all', [NoticiaController::class, 'index']);
-    Route::get('/create', [NoticiasController::class, 'create']);
-    Route::post('/', [NoticiaController::class, 'store'])->name('salvar-noticia')->middleware([HandlePrecognitiveRequests::class]);
-    // Route::get('/show/{id}', [NoticiaController::class, 'show']);
-    Route::get('/show', function () {
-        return Inertia::render('Noticia/Show');
+Route::prefix('publicacoes')->group(function () {
+    Route::get('/detalhes', function () {
+        return Inertia::render('Publicacao/Detalhes', ['publicacao' => ['titulo' => 'Teste', 'createdAt' => '10/10/2010', 'imagem' =>'https://picsum.photos/id/238/1920/1080', 'legenda' => 'legenda teste']]);
     });
-    Route::get('/edit/{id}', [NoticiaController::class, 'edit']);
-    Route::put('/edit/{id}', [NoticiaController::class, 'update'])->name('atualizar-noticia')->middleware([HandlePrecognitiveRequests::class]);
-    Route::delete('/delete/{id}', [NoticiaController::class, 'destroy'])->name('excluir-noticia')->middleware([HandlePrecognitiveRequests::class]);
 });
-
 
 //Exemplo header e card template tailwind awesome
 Route::get('/welcome', function () {

@@ -34,19 +34,3 @@ Route::get('/welcome', function () {
 Route::get('/testeCards', function () {
     return Inertia::render('TesteCards');
 });
-
-//Testando os cards de noticias com 2 imagens grandes antes do grid de 3. (estilo EGP Jundiaí)
-Route::get('/testeCards2', function () {
-    return Inertia::render('TesteCards2');
-});
-
-
-//Testando os cards de noticias com 2 cards grandes antes do grid de 3. (estilo EGP Jundiaí)
-Route::get('/testeCards3', function () {
-    return Inertia::render('TesteCards3');
-});
-
-//Testando os cards de noticias sem as tags
-Route::get('/testeCardsSemTags', function () {
-    return Inertia::render('TesteCardsSemTags');
-});

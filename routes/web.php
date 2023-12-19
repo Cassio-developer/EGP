@@ -3,6 +3,9 @@
 use Illuminate\Foundation\Http\Middleware\HandlePrecognitiveRequests;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\NoticiaController;
+
+use App\Http\Controllers\HomeController;
 
 
 Route::get('/', function () {
@@ -50,3 +53,9 @@ Route::get('/testeCards3', function () {
 Route::get('/testeCardsSemTags', function () {
     return Inertia::render('TesteCardsSemTags');
 });
+
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+
+Route::get('/login', [HomeController::class, 'login'])->name('usuario.login');
+
+Route::get('/login/admin', [AdminController::class, 'login'])->name('admin.login');

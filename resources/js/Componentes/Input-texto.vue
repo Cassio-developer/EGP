@@ -2,10 +2,10 @@
 import { onMounted, ref } from 'vue';
 
 defineProps({
-    modeloValor: String,
+    modelValue: String,
 });
 
-defineEmits(['update:modeloValor']);
+defineEmits(['update:modelValue']);
 
 const input = ref(null);
 
